@@ -25,37 +25,9 @@ function init() {
   // Set scene background
   scene.background = new THREE.Color('skyblue');
 
-  //Textures
-  var loader = new THREE.TextureLoader();
+  var texture = new THREE.TextureLoader().load('');
 
-  var material;
-
-  // load a resource
-loader.load(
-    // resource URL
-    'https://github.com/JOwens14/PhysicsDemo/blob/master/textures/crate.gif',
-    // Function when resource is loaded
-    function ( texture ) {
-        // do something with the texture
-        material = new THREE.MeshBasicMaterial( {
-            map: texture
-         } );
-    },
-    // Function called when download progresses
-    function ( xhr ) {
-        console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-    },
-    // Function called when download errors
-    function ( xhr ) {
-        console.log( 'An error happened' );
-        console.log(xhr);
-    }
-);
-
-
-
-  //console.log(texture.image);
-  //var material = new THREE.MeshBasicMaterial({map: texture});
+  var material = new THREE.MeshBasicMaterial({map: texture});
 
   var geometry = new THREE.BoxBufferGeometry(100, 100, 100);
 
