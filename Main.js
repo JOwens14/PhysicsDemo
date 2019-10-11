@@ -30,12 +30,11 @@ function init() {
 
   var material = new THREE.MeshBasicMaterial({map: texture});
 
-
   var geometry = new THREE.BoxBufferGeometry(100, 100, 100);
 
-  var material = new THREE.MeshBasicMaterial( { map: mat} );
+  var material = new THREE.MeshBasicMaterial( { map: texture} );
 
-  mesh = new THREE.Mesh( geometry, mater );
+  mesh = new THREE.Mesh( geometry, material );
 
   scene.add(mesh);
 
