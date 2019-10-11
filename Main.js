@@ -33,7 +33,7 @@ function init() {
   // load a resource
 loader.load(
     // resource URL
-    'textures/crate.gif',
+    'https://github.com/JOwens14/PhysicsDemo/blob/master/textures/crate.gif',
     // Function when resource is loaded
     function ( texture ) {
         // do something with the texture
