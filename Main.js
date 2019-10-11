@@ -25,7 +25,7 @@ function init() {
   // Set scene background
   scene.background = new THREE.Color('skyblue');
 
-  var texture = new THREE.TextureLoader().load('');
+  var texture = new THREE.TextureLoader().load('https://github.com/JOwens14/PhysicsDemo/blob/master/textures/crate.gif');
 
   var material = new THREE.MeshBasicMaterial({map: texture});
 
