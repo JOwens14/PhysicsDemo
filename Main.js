@@ -25,33 +25,19 @@ function init() {
   // Set scene background
   scene.background = new THREE.Color('skyblue');
 
-  //Textures
-  var loader = new THREE.TextureLoader();
 
-  var material;
 
-  // load a resource
-loader.load(
-    // resource URL
-    'textures/crate.gif',
-    // Function when resource is loaded
-    function ( texture ) {
-        // do something with the texture
-        material = new THREE.MeshBasicMaterial( {
-            map: texture
-         } );
-    },
-    // Function called when download progresses
-    function ( xhr ) {
-        console.log( (xhr.loaded / xhr.total * 100) + '% loaded' );
-    },
-    // Function called when download errors
-    function ( xhr ) {
-        console.log( 'An error happened' );
-        console.log(xhr);
-    }
-);
 
+
+
+
+
+
+
+  mat = new Image();
+  mat.src = 'textures/crate.gif';
+
+  console.log(mat);
 
 
   //console.log(texture.image);
@@ -59,7 +45,9 @@ loader.load(
 
   var geometry = new THREE.BoxBufferGeometry(100, 100, 100);
 
-  mesh = new THREE.Mesh( geometry, material );
+  var material = new THREE.MeshBasicMaterial( { map: mat} );
+
+  mesh = new THREE.Mesh( geometry, mater );
 
   scene.add(mesh);
 
