@@ -24,7 +24,7 @@ function init() {
   scene = new THREE.Scene();
   // Set scene background
 
-  scene.background = new THREE.Color('blue');
+  scene.background = new THREE.Color('white');
 
   var texture = new THREE.TextureLoader().load('./textures/crate.gif');
 
