@@ -40,7 +40,7 @@ function init() {
 
   renderer = new THREE.WebGLRenderer( { antialias: true } );
   renderer.setPixelRatio( window.devicePixelRatio );
-  renderer.setSize( window.innerWidth - 80, window.innerHeight - 45 ); //reduce render size by 16:9 ratio to fit whole render on a 16:9 screen naturally, without full screen
+  renderer.setSize(window.innerWidth, window.innerHeight); //reduce render size by 16:9 ratio to fit whole render on a 16:9 screen naturally, without full screen
   document.body.appendChild( renderer.domElement );
 
   window.addEventListener( 'resize', onWindowResize, false );
@@ -52,7 +52,7 @@ function onWindowResize() {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
 
-  renderer.setSize( window.innerWidth, window.innerHeight );
+  renderer.setSize( window.innerWidth, window.innerHeight);
 
 }
 
